@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: int_taxi_trip_metrics
+    description: Trip-level metrics and dimensional attributes used by marts.
+    columns:
+      - name: trip_id
+        tests:
+          - not_null
+          - unique
+      - name: trip_duration_minutes
+        description: Trip duration measured from pickup to dropoff.
+        tests:
+          - non_negative
+      - name: distance_band
+        description: Distance group for aggregate reporting.
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['short', 'medium', 'long']

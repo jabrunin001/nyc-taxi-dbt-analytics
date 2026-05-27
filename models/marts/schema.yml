@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: fct_taxi_trips
+    description: Trip-level fact table for downstream taxi analytics.
+    columns:
+      - name: trip_id
+        tests:
+          - not_null
+          - unique
+      - name: service_date
+        tests:
+          - not_null
+      - name: total_amount
+        tests:
+          - non_negative
+
+  - name: mart_daily_taxi_metrics
+    description: Daily taxi demand and revenue metrics by pickup borough.
+    columns:
+      - name: service_date
+        tests:
+          - not_null
+      - name: pickup_borough
+        tests:
+          - not_null
+      - name: trip_count
+        tests:
+          - non_negative
+      - name: gross_revenue
+        tests:
+          - non_negative
+
+  - name: mart_route_revenue
+    description: Revenue and tipping behavior by pickup/dropoff borough and distance band.
+    columns:
+      - name: pickup_borough
+        tests:
+          - not_null
+      - name: dropoff_borough
+        tests:
+          - not_null
+      - name: trip_count
+        tests:
+          - non_negative
+      - name: gross_revenue
+        tests:
+          - non_negative

@@ -1,0 +1,11 @@
+trip_id,pickup_datetime,dropoff_datetime,pickup_borough,dropoff_borough,passenger_count,trip_distance,fare_amount,tip_amount,tolls_amount,total_amount,payment_type,rate_code
+1,2026-01-01 08:05:00,2026-01-01 08:23:00,Manhattan,Manhattan,1,2.40,14.20,3.00,0.00,20.70,credit_card,standard
+2,2026-01-01 09:12:00,2026-01-01 09:48:00,Queens,Manhattan,2,10.10,42.50,8.50,6.94,62.44,credit_card,jfk
+3,2026-01-01 18:31:00,2026-01-01 18:46:00,Brooklyn,Brooklyn,1,3.20,18.00,0.00,0.00,21.50,cash,standard
+4,2026-01-02 07:45:00,2026-01-02 08:05:00,Manhattan,Queens,1,4.60,25.00,5.00,0.00,33.50,credit_card,standard
+5,2026-01-02 22:15:00,2026-01-02 22:34:00,Manhattan,Brooklyn,3,5.80,29.50,6.00,0.00,39.00,credit_card,standard
+6,2026-01-03 13:02:00,2026-01-03 13:18:00,Queens,Queens,1,2.90,16.00,0.00,0.00,19.50,cash,standard
+7,2026-01-03 16:10:00,2026-01-03 16:55:00,Brooklyn,Manhattan,2,8.40,39.00,7.80,0.00,50.30,credit_card,standard
+8,2026-01-04 06:20:00,2026-01-04 06:52:00,Queens,Manhattan,1,11.30,52.00,10.40,6.94,72.84,credit_card,jfk
+9,2026-01-04 11:05:00,2026-01-04 11:16:00,Manhattan,Manhattan,1,1.70,10.00,2.00,0.00,15.50,credit_card,standard
+10,2026-01-04 23:40:00,2026-01-05 00:04:00,Brooklyn,Queens,2,6.10,31.00,0.00,0.00,34.50,cash,standard
