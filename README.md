@@ -9,6 +9,7 @@ Public analytics engineering project using dbt, DuckDB, and NYC taxi-style trip 
 - Local-first development with DuckDB, no paid warehouse required.
 - CI workflow that runs `dbt build` and generates dbt docs.
 - Stakeholder-facing marts for revenue, demand, route, and tipping analysis.
+- Executive Streamlit dashboard that turns marts into business-facing answers.
 
 ## Business Questions
 
@@ -39,6 +40,30 @@ dbt deps --profiles-dir .
 dbt build --profiles-dir .
 dbt docs generate --profiles-dir .
 dbt docs serve --profiles-dir .
+```
+
+Launch the dashboard after `dbt build` creates `nyc_taxi.duckdb`:
+
+```powershell
+streamlit run dashboard/app.py
+```
+
+## Dashboard
+
+The Streamlit dashboard is designed as an executive metrics command center. It answers:
+
+- Where is taxi revenue concentrated by pickup borough?
+- Which borough-to-borough routes create the most value?
+- How does distance band relate to tipping behavior?
+- Can stakeholders trust the metrics behind the charts?
+
+Dashboard files live in `dashboard/`:
+
+```text
+dashboard/
+  app.py          # Streamlit UI and visual command-center layout
+  data_access.py  # DuckDB reads from dbt-built marts
+  metrics.py      # Tested KPI and chart transformations
 ```
 
 ## Model Layers
